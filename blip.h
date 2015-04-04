@@ -3,16 +3,25 @@
 #ifndef BLIP_H
 #define BLIP_H
 
+#include "location.h"
+
 /*
  * No description
  */
 class Blip
 {
 	public:
+   
 		// class constructor
 		Blip();
 		// class destructor
 		~Blip();
+		// changes location
+		void setLoc(Location targetLoc);
+		// returns location
+		Location getLoc();
+	private:
+        Location loc;
 };
 
 #endif // BLIP_H

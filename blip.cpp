@@ -8,6 +8,18 @@ Blip::Blip()
 	// insert your code here
 }
 
+// sets location
+Blip::setLoc(Location targetLoc)
+{
+    loc = targetLoc;
+}
+
+// returns Location
+Blip::getLoc()
+{
+    return loc;
+}
+
 // class destructor
 Blip::~Blip()
 {
