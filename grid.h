@@ -2,17 +2,26 @@
 
 #ifndef GRID_H
 #define GRID_H
+#include <vector>
+#include "blip.h"
+#include "location.h"
 
-/*
- * No description
- */
 class Grid
 {
+        std::vector<std::vector<blip*> > grid;
 	public:
+        // dimensions of board
+        int width;
+        int height;
+        
 		// class constructor
 		Grid(int length, int width);
 		// class destructor
 		~Grid();
+		// sets a new target for a space
+		setBlip(Blip newBlip, location loc);
+		
+
 };
 
 #endif // GRID_H

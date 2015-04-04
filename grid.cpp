@@ -3,9 +3,15 @@
 #include "grid.h" // class's header file
 
 // class constructor
-Grid::Grid(int length, int width)
+Grid::Grid(int width, int height)
 {
-	// insert your code here
+	for (int i=1;i<=height;i++)
+	{
+	    for (int j=1;j<=width;j++)
+	    {
+//	        grid[i][j] = null;
+        }
+    }
 }
 
 // class destructor
