@@ -8,7 +8,7 @@
 
 class Grid
 {
-        std::vector<std::vector<blip*> > grid;
+        std::vector<std::vector<Blip*>> grid;
 	public:
         // dimensions of board
         int width;
@@ -19,7 +19,7 @@ class Grid
 		// class destructor
 		~Grid();
 		// sets a new target for a space
-		setBlip(Blip newBlip, location loc);
+		void setBlip(Blip newBlip, Location loc);
 		
 
 };
