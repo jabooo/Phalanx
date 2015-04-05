@@ -15,6 +15,8 @@ class Board
              int setBlip(Location target, Blip newBlip);
              // returns the blip at a location
              Blip getBlip(Location loc);
+             // checks whether a location is occupied
+             bool isBlip(Location loc);
              // clears the blip at a location
              int clearBlip(Location target);     
              // moves a blip to another location

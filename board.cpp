@@ -26,6 +26,11 @@ Board::getBlip(Location loc)
     return board[loc.y][loc.x];
 }
 
+// checks whether a space is occupied
+Board::isBlip(Location loc)
+{
+}
+
 // clears the blip at a location
 Board::clearBlip(Location loc)
 {
