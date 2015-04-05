@@ -64,15 +64,6 @@ Board::flip(Blip blip1,Blip blip1)
     setBlip(blip2,loc1);
 }
 
-
-
-
-
-
-             ///////////////////////
-             //INFORMATION REQESTS//
-             ///////////////////////
-
 // checks whether a space is occupied
 Board::isBlip(Location loc)
 {

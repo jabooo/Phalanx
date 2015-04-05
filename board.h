@@ -27,12 +27,6 @@ class Board
              void flip(Location loc1, Location loc2);  
              // switches the locations of two blips
              void flip(Blip blip1, Blip blip2);
-
-
-
-             ///////////////////////
-             //INFORMATION REQESTS//
-             ///////////////////////
              // returns the blip at a location
              Blip getBlip(Location loc);             
              // checks whether a location is occupied
