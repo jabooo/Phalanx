@@ -3,6 +3,7 @@
 #include "location.h"
 #include "blip.h"
 #include <vector>
+#include "player.h"
 
 class Board
 {
@@ -11,22 +12,45 @@ class Board
              Board();
              // class destructor
              ~Board();
+             
+             
+             ///////////////////
+             //BLIP MANAGEMENT//
+             ///////////////////
              // sets a point on the board to a blip
              int setBlip(Location target, Blip newBlip);
-             // returns the blip at a location
-             Blip getBlip(Location loc);
-             // checks whether a location is occupied
-             bool isBlip(Location loc);
              // clears the blip at a location
-             int clearBlip(Location target);     
+             void clearBlip(Location target);     
              // moves a blip to another location
-             int moveBlip (Location target, Blip targetBlip);
+             void moveBlip (Location target, Blip targetBlip);
              // switches the blips of two locations
-             int flip(Location loc1, Location loc2);  
+             void flip(Location loc1, Location loc2);  
              // switches the locations of two blips
-             int flip(Blip blip1, Blip blip2);
+             void flip(Blip blip1, Blip blip2);
+
+
+
+             ///////////////////////
+             //INFORMATION REQESTS//
+             ///////////////////////
+             // returns the blip at a location
+             Blip getBlip(Location loc);             
+             // checks whether a location is occupied
+             bool isBlip(Location loc);            
+             
+             
+             
+             
+             /////////////////////
+             //PLAYER MANAGEMENT//
+             /////////////////////
+             // creates a player and adds it to the appropriate lists
+             void newPlayer();
+             // returns the player with the given id
+             Player getPlayer(int id);
              
       private :
+             std::vector<Player*> players;
              std::vector<std::vector<Blip*> > grid;
 };
 

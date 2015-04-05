@@ -5,6 +5,14 @@ Board::Board()
 {
 }
 
+// class destructor
+Board::~Board()
+{
+}
+
+             ///////////////////
+             //BLIP MANAGEMENT//
+             ///////////////////
 // sets a point on the board to a blip
 Board::setBlip(Location loc, Blip newBlip)
 {
@@ -20,16 +28,6 @@ Board::setBlip(Location loc, Blip newBlip)
         }    
 }
 
-// returns the blip at a location
-Board::getBlip(Location loc)
-{
-    return board[loc.y][loc.x];
-}
-
-// checks whether a space is occupied
-Board::isBlip(Location loc)
-{
-}
 
 // clears the blip at a location
 Board::clearBlip(Location loc)
@@ -65,7 +63,46 @@ Board::flip(Blip blip1,Blip blip1)
     setBlip(blip1,loc2);
     setBlip(blip2,loc1);
 }
-// class destructor
-Board::~Board()
+
+
+
+
+
+
+             ///////////////////////
+             //INFORMATION REQESTS//
+             ///////////////////////
+
+// checks whether a space is occupied
+Board::isBlip(Location loc)
 {
 }
+
+// returns the blip at a location
+Board::getBlip(Location loc)
+{
+    return board[loc.y][loc.x];
+}
+
+
+
+
+
+
+             /////////////////////
+             //PLAYER MANAGEMENT//
+             /////////////////////
+
+// creates a player and adds him to the appropriate lists
+Board::newPlayer()
+{
+    Player() player;
+    players[players::size] = player;
+}
+
+// returns the player with the given id
+Board::getPlayer(int id)
+{
+    return players[id]
+}
+
