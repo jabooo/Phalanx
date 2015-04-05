@@ -20,11 +20,46 @@ Board::setBlip(Location loc, Blip newBlip)
         }    
 }
 
+// returns the blip at a location
+Board::getBlip(Location loc)
+{
+    return board[loc.y][loc.x];
+}
+
 // clears the blip at a location
 Board::clearBlip(Location loc)
 {
+    grid[loc.y][loc.x] = null;
 }
 
+// moves a blip from one location to another
+Board::moveBlip(Location targetLoc, Blip targetBlip)
+{
+    grid[targetBlip.getLoc().y][targetBlip.getLoc().x]=null;
+    letBlip(targetLoc, targetBlip);
+}
+
+// switches the blips in two locations
+Board::flip(Location loc1,Location loc2)
+{
+    Blip blip1;
+    Blip blip2;
+    blip1 = grid[loc1.y][loc1.x];
+    blip2 = grid[loc2.y][loc2.x];
+    setBlip(blip1,loc2);
+    setBlip(blip2,loc1);
+}
+
+// switches the locations of two blips
+Board::flip(Blip blip1,Blip blip1)
+{
+    Location loc1;
+    Location loc2;
+    loc1 = blip1.getLoc();
+    loc2 = blip2.getLoc();
+    setBlip(blip1,loc2);
+    setBlip(blip2,loc1);
+}
 // class destructor
 Board::~Board()
 {
