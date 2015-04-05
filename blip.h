@@ -13,7 +13,7 @@ class Blip
 	public:
    
 		// class constructor
-		Blip();
+		Blip(const Location someLoc);
 		// class destructor
 		~Blip();
 		// changes location

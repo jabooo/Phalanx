@@ -3,9 +3,8 @@
 #include "blip.h" // class's header file
 
 // class constructor
-Blip::Blip()
+Blip::Blip(const Location& someLoc) : loc(someLoc)
 {
-	// insert your code here
 }
 
 // sets location
